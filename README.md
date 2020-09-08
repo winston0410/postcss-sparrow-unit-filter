@@ -1,10 +1,16 @@
 # PostCSS Sparrow Units Filter
 
-A PostCSS Sparrow plugin that helps you **search CSS declarations** by **units**. Avoid the hassle of reinventing the wheel and filter selectors you want again when you create a new PostCSS plugin.
+[![Known Vulnerabilities](https://snyk.io/test/github/winston0410/postcss-sparrow-units-filter/badge.svg?targetFile=package.json)](https://snyk.io/test/github/winston0410/postcss-sparrow-units-filter?targetFile=package.json) [![Maintainability](https://api.codeclimate.com/v1/badges/7598a43da13cbf471577/maintainability)](https://codeclimate.com/github/winston0410/postcss-sparrow-units-filter/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/7598a43da13cbf471577/test_coverage)](https://codeclimate.com/github/winston0410/postcss-sparrow-units-filter/test_coverage) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/b1aed991addf4edbaff9fca984269803)](https://www.codacy.com/manual/winston0410/postcss-sparrow-units-filter?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=winston0410/postcss-sparrow-units-filter&amp;utm_campaign=Badge_Grade)
+
+A PostCSS Sparrow plugin that helps you **search CSS declarations** by **units**.
+
+This plugin is designed to be used with [PostCSS Sparrow](https://www.npmjs.com/package/postcss-sparrow), which helps you filter CSS declarations by **selectors**.  By using these two plugins together, you can **easily get the declarations you need**.
 
 ## Made in Hong Kong :free: :free:
 
 This plugin is made with love by a Hong Konger.
+
+## Installation
 
 This plugin require you to use [PostCSS Sparrow](https://www.npmjs.com/package/postcss-sparrow) for matching with selectors you want.
 
