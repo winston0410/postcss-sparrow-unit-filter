@@ -62,6 +62,8 @@ module.exports = {
 
 An array of units that you want to match with. Use `*` as wildcard and select all units.
 
+For example, `px` will match `padding: 20px`.
+
 ### `options.inclusion` : Boolean
 
 True for including and False for excluding selectors listed in `options.units`.
