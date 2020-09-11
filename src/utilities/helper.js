@@ -54,13 +54,13 @@ const filterByUnits = (options) => (decl) =>
       convertToPredicateFn,
       R.applyTo(decl)
     ),
-    ifUnitHasWildCard(
-      R.F,
-      R.pipe(
-        getUnits,
-        convertToPredicateFn,
-        R.complement(R.applyTo(decl))
-      )
+    R.pipe(
+      ifUnitHasWildCard(
+        getAllUnits,
+        getUnits
+      ),
+      convertToPredicateFn,
+      R.complement(R.applyTo(decl))
     )
   )(options)
 
