@@ -46,17 +46,13 @@ const getAllUnits = R.always(unitList)
 
 const filterByUnits = (options) => (decl) =>
   shouldIncludeOrExclude(
-    ifUnitHasWildCard(
-      R.pipe(
+    R.pipe(
+      ifUnitHasWildCard(
         getAllUnits,
-        convertToPredicateFn,
-        R.applyTo(decl)
+        getUnits
       ),
-      R.pipe(
-        getUnits,
-        convertToPredicateFn,
-        R.applyTo(decl)
-      )
+      convertToPredicateFn,
+      R.applyTo(decl)
     ),
     ifUnitHasWildCard(
       R.F,
