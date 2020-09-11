@@ -45,23 +45,16 @@ const filterInAllUnits = R.pipe(
 const getAllUnits = R.always(unitList)
 
 const filterByUnits = (options) => (decl) =>
-  shouldIncludeOrExclude(
-    R.pipe(
-      ifUnitHasWildCard(
-        getAllUnits,
-        getUnits
-      ),
-      convertToPredicateFn,
-      R.applyTo(decl)
+  R.pipe(
+    ifUnitHasWildCard(
+      getAllUnits,
+      getUnits
     ),
-    R.pipe(
-      ifUnitHasWildCard(
-        getAllUnits,
-        getUnits
-      ),
-      convertToPredicateFn,
-      R.complement(R.applyTo(decl))
-    )
+    convertToPredicateFn,
+    (predicate) => shouldIncludeOrExclude(
+      () => R.applyTo(decl)(predicate),
+      () => R.complement(R.applyTo(decl))(predicate)
+    )(options)
   )(options)
 
 export {

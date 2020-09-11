@@ -47,7 +47,6 @@ describe('postcss-sparrow-unit-filter', function () {
                   callbacks: [
                     (v) => {
                       spy()
-                      console.log(v)
                     }
                   ]
                 })
