@@ -31,6 +31,14 @@ const convertToPredicateFn = R.pipe(
   R.anyPass
 )
 
+const unitList = [
+  'px', 'fr', '%', 'em', 'rem', 'vw', 'vh', 'vmin', 'vmax', 'ch'
+]
+//
+// const filterInAllUnits = () => {}
+//
+// const filterOutAllUnits = () => {}
+
 const filterByUnits = (options) => (decl) =>
   shouldIncludeOrExclude(
     ifUnitHasWildCard(
