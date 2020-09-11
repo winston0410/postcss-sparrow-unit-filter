@@ -38,7 +38,7 @@ module.exports = {
           callbacks: [
             require('postcss-sparrow-units-filter')(
               {
-                units: [],
+                units: ['px', 'rem', 'em'],
                 inclusion: true,
                 callbacks: [
                   //Do transformation here with your own callback functions
