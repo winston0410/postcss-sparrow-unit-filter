@@ -14,10 +14,14 @@ describe('postcss-sparrow-unit-filter', function () {
     body{
       padding: 5rem;
       display: none;
+      font-family: san-serif;
     }
 
     a{
       letter-spacing: 20px;
+      line-height: 3;
+      color: #be132d;
+      border: 2px solid #f5f5f5;
     }`
 
     const beforeTransformation = postcss
@@ -70,7 +74,8 @@ describe('postcss-sparrow-unit-filter', function () {
           )(value)
         )(0)(result.root.nodes)
 
-        expect(spy.callCount).to.equal(declAmount)
+        expect(spy.callCount).to.not.equal(declAmount)
+        expect(spy.callCount).to.equal(2) // Only 2 rules with unit
       })
     })
   })
