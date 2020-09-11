@@ -13,6 +13,7 @@ describe('postcss-sparrow-unit-filter', function () {
     css = `
     body{
       padding: 5rem;
+      display: none;
     }
 
     a{
@@ -31,7 +32,7 @@ describe('postcss-sparrow-unit-filter', function () {
 
   describe('if wildcard is used', function () {
     describe('if inclusion is set to true', function () {
-      it('all declarations should be selected', async function () {
+      it('all declarations with unit should be selected', async function () {
         const spy = sinon.spy()
 
         const options = {
@@ -46,6 +47,7 @@ describe('postcss-sparrow-unit-filter', function () {
                   callbacks: [
                     (v) => {
                       spy()
+                      console.log(v)
                     }
                   ]
                 })
