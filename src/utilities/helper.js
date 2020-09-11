@@ -34,15 +34,24 @@ const convertToPredicateFn = R.pipe(
 const unitList = [
   'px', 'fr', '%', 'em', 'rem', 'vw', 'vh', 'vmin', 'vmax', 'ch'
 ]
-//
-// const filterInAllUnits = () => {}
+
+const filterInAllUnits = R.pipe(
+  convertToPredicateFn
+)
+
 //
 // const filterOutAllUnits = () => {}
+
+const getAllUnits = R.always(unitList)
 
 const filterByUnits = (options) => (decl) =>
   shouldIncludeOrExclude(
     ifUnitHasWildCard(
-      R.T,
+      R.pipe(
+        getAllUnits,
+        convertToPredicateFn,
+        R.applyTo(decl)
+      ),
       R.pipe(
         getUnits,
         convertToPredicateFn,
