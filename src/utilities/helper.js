@@ -1,5 +1,6 @@
 import {
-  getUnits
+  getUnits,
+  getAllUnits
 } from './partial-functions/unit.js'
 
 import {
@@ -30,12 +31,6 @@ const convertToPredicateFn = R.pipe(
   R.map(R.test),
   R.anyPass
 )
-
-const unitList = [
-  'px', 'fr', '%', 'em', 'rem', 'vw', 'vh', 'vmin', 'vmax', 'ch'
-]
-
-const getAllUnits = R.always(unitList)
 
 const filterByUnits = (options) => (decl) =>
   R.pipe(
