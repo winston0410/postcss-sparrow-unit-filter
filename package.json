@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "test": "npx mocha --recursive './test/**/*.js' --require esm",
-    "build": "NODE_ENV=production npx rollup -c;"
+    "build": "NODE_ENV=production npx rollup -c;",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
