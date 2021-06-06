@@ -45,7 +45,7 @@
     "chai-match": "^1.1.1",
     "chalk": "^4.1.0",
     "eslint": "^7.9.0",
-    "eslint-config-standard": "^14.1.1",
+    "eslint-config-standard": "16.0.3",
     "eslint-plugin-chai-expect": "^2.2.0",
     "eslint-plugin-chai-friendly": "^0.6.0",
     "eslint-plugin-const-immutable": "^2.1.0",
